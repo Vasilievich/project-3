@@ -1,9 +1,9 @@
 
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Testing RestAPI with Python
+# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Testing ECommerce Website with Python
 
 | Language | Type      | Date       | Due        | Author               |
 |----------|-----------|------------|------------|----------------------|
-| Python   | Project 2 | 02/15/2023 | 02/21/2023 | Suresh Melvin Sigera |
+| Python   | Project 3 | 03/01/2023 | 03/03/2023 | Suresh Melvin Sigera |
 
 ## Prompt
 
