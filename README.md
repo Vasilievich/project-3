@@ -39,7 +39,7 @@ Testing the Shopping Cart of the e-commerce website
 You should 
 
 - Utilize unit tests and the Selenium library to test different use cases for different use stories
-- The use of appropriate naming conventions, docstrings, and OO principles should be followed
+- Use appropriate naming conventions, docstrings, and OO principles should be followed
 - Generate the testing reports that are required as part of the testing process
 - Manage your code base by using GitHub branches
 
