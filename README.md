@@ -108,5 +108,3 @@ Share the experience by answering the following:
 - Use all resources available to solve the issue on your own before seeking assistance.
 - If you do seek assistance in Slack, use the support channel and explain the issue as clearly and detailed as you can,
   include screenshots when possible, and be prepared to explain what you've done to solve the issue on your own.
-
-## Get started!
