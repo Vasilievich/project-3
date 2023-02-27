@@ -41,6 +41,7 @@ You should
 - Utilize unit tests and the Selenium library to test different use cases for different use stories
 - Use appropriate naming conventions, docstrings, and OO principles should be followed
 - Generate the testing reports that are required as part of the testing process
+- Make use of a test suite that has multiple test cases with one test suite
 - Manage your code base by using GitHub branches
 
 ### Planning requirements
