@@ -57,6 +57,8 @@ class FilterGlassesAddToCart(unittest.TestCase):
         time.sleep(3)
         self.driver.find_element(By.XPATH, "/html/body/div[1]/main/div[12]/div[1]/div[2]/div[2]/div[2]/div/div/div/label[1]/div[1]/div[1]/button/span").click()
         time.sleep(3)
+        self.driver.find_element(By.XPATH, "/html/body/div[1]/main/div[12]/div[1]/div[2]/div[2]/div[3]/div/div/div/button[1]/div/span").click()
+        time.sleep(3)
 
 
 
