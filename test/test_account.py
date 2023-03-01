@@ -20,20 +20,17 @@ class TestAccount(unittest.TestCase):
 
     def test_account_creation(self):
         self.sign_in = self.driver.find_element(By.XPATH, '/html/body/div[2]/div/header/nav/div[1]/div/section[2]/ul/li[3]/a').click()
-        time.sleep(3)
+        time.sleep(2)
         self.create_account = self.driver.find_element(By.XPATH, '/html/body/div[1]/main/div/div[2]/div/div[2]/div/div[3]/div/div/div/a/span').click()
-        time.sleep(3)
+        time.sleep(2)
         self.full_name_field = self.driver.find_element(By.XPATH, '/html/body/div[1]/main/div/div[2]/div/div[2]/div/div[1]/div/div/div[2]/div/form/div[1]/label/input')
         self.full_name_field.send_keys("John Smith")
-        self.full_name_field.submit()
         time.sleep(4)
         self.email_field = self.driver.find_element(By.XPATH, '/html/body/div[1]/main/div/div[2]/div/div[2]/div/div[1]/div/div/div[2]/div/form/div[2]/label/input')
-        self.email_field.send_keys("123456abc@gmail.com")
-        self.email_field.submit()
+        self.email_field.send_keys("1234567@gmail.com")
         time.sleep(4)
         self.password_field = self.driver.find_element(By.XPATH, '/html/body/div[1]/main/div/div[2]/div/div[2]/div/div[1]/div/div/div[2]/div/form/div[3]/label/input')
-        self.password_field.send_keys("123456abc")
-        self.password_field.submit()
+        self.password_field.send_keys("1234567890")
         time.sleep(4)
         self.press_create = self.driver.find_element(By.XPATH, '/html/body/div[1]/main/div/div[2]/div/div[2]/div/div[1]/div/div/div[2]/div/form/div[5]/button/span')
         self.assertEqual("Create account", self.press_create.text)
@@ -41,8 +38,19 @@ class TestAccount(unittest.TestCase):
 
 
     def test_account_login(self):
-        pass
-
+        self.sign_in = self.driver.find_element(By.XPATH, '/html/body/div[2]/div/header/nav/div[1]/div/section[2]/ul/li[3]/a').click()
+        time.sleep(3)
+        self.email_field = self.driver.find_element(By.XPATH, '/html/body/div[1]/main/div/div[2]/div/div[2]/div/div[1]/div/div/div[2]/div/form/div[1]/label/input')
+        self.email_field.send_keys("1234567@gmail.com")
+        time.sleep(4)
+        self.password_field = self.driver.find_element(By.XPATH, '/html/body/div[1]/main/div/div[2]/div/div[2]/div/div[1]/div/div/div[2]/div/form/div[2]/label/input')
+        self.password_field.send_keys("1234567890")
+        time.sleep(4)
+        self.click_sign_in = self.driver.find_element(By.XPATH, '/html/body/div[1]/main/div/div[2]/div/div[2]/div/div[1]/div/div/div[2]/div/form/div[4]/button/span').click()
+        time.sleep(4)
+        self.press_sign_out = self.driver.find_element(By.XPATH, '/html/body/div[2]/div/main/div/div/p/a')
+        self.assertEqual("Sign out", self.press_sign_out.text)
+        time.sleep(3)
 
 
     def tearDown(self):
