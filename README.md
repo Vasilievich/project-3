@@ -3,7 +3,7 @@
 
 | Language | Type      | Date       | Due        | Author               |
 |----------|-----------|------------|------------|----------------------|
-| Python   | Project 3 | 03/01/2023 | 03/03/2023 | Suresh Melvin Sigera |
+| Python   | Project 3 | 03/01/2023 | 03/06/2023 | Suresh Melvin Sigera |
 
 ## Prompt
 
@@ -50,8 +50,7 @@ As you've discovered, a project consists of more than just code.
 
 This project requires planning organized within the **GitHub projects** with the following lists:
 
-- **Icebox**: Holds user stories that have yet to be moved to the Current/MVP list. All user stories are originally put into
-  the Icebox, including both MVP and wish list stories.
+- **Icebox**: Holds user stories that have yet to be moved to the Current/MVP list. All user stories are originally put into the Icebox, including both MVP and wish list stories.
 - **Current/MVP**: Holds user stories that must be completed to meet the minimum project requirements (MVP). Once the MVP
   has been met, additional user stories may be moved to this list from the Icebox.
 - **Completed**: Holds completed user stories.
@@ -61,7 +60,7 @@ Important: User stories need to be formed properly using this template:
     As a <role>, I want <feature> so that <reason>.
 ```
 
-### Presentation requirements - 3/3/2023 at 2:45 PM EST
+### Presentation requirements - 03/06/2023 at 11:00 PM EST
 
 You will have 12 minutes to present and demonstrate the following:
 
