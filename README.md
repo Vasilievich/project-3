@@ -67,7 +67,7 @@ You will have 12 minutes to present and demonstrate the following:
 
 - Introduce your project by paraphrasing its `README.md`.
 - Share project workflow.
-- Demonstrate your API test features.
+- Demonstrate your Selenium test features.
 - Share/discuss the following code.
 
 Share the experience by answering the following:
