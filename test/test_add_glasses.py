@@ -33,33 +33,45 @@ class FilterGlassesAddToCart(unittest.TestCase):
         mens_eyglasses = self.driver.find_element(By.XPATH, "/html/body/div[1]/main/div[1]/div/div/div/div/div[3]/div/div/div/div[1]/div/h1")
         time.sleep(5)
         self.assertEqual("Men's Eyeglasses", mens_eyglasses.text)
+        # select eyeglasses
         self.driver.find_element(By.XPATH, "/html/body/div[1]/main/div[3]/div/div/div/div/button[2]").click()
-        time.sleep(3)
+        time.sleep(2)
+        # select Shop Men
         self.driver.find_element(By.XPATH, "/html/body/div[1]/main/div[4]/div[1]/div/div/div/div[2]/button[2]/span").click()
-        time.sleep(3)
+        time.sleep(2)
+        # select new arrivals
         self.driver.find_element(By.XPATH, "/html/body/div[1]/main/div[4]/div[3]/div/div/div/div[1]/div/div[2]/div/fieldset[3]/label").click()
-        time.sleep(3)
+        time.sleep(2)
+        # select filter
         self.driver.find_element(By.XPATH, "/html/body/div[1]/main/div[4]/div[3]/div/div/div/div[1]/div/div[1]/button[4]/span").click()
-        time.sleep(3)
+        time.sleep(2)
+        # select medium
         self.driver.find_element(By.XPATH, "/html/body/div[1]/main/div[4]/div[3]/div/div/div/div[1]/div/div[5]/div/fieldset[10]/label").click()
-        time.sleep(3)
+        time.sleep(2)
+        # select color
         self.driver.find_element(By.XPATH, "/html/body/div[1]/main/div[5]/div/div[2]/div/div/div/div/div[2]/div/div/div/div[1]/a/div/div/div/img").click()
-        time.sleep(3)
+        time.sleep(2)
+        # select green
         self.driver.find_element(By.XPATH, "/html/body/div[1]/main/div[5]/div/div[2]/div/div/div/div/div[2]/div/div/div/div[1]/a/div/div/div/img").click()
-        time.sleep(3)
+        time.sleep(2)
+        # select glasses
         self.driver.find_element(By.XPATH, "/html/body/div[1]/main/div[12]/div[1]/div[2]/div[2]/div[2]/div/div/div/label[2]/div[1]/div/button/span").click()
+        time.sleep(2)
+        # select lenses and purchase
+        self.driver.find_element(By.CLASS_NAME, "c-cFaYiI c-cFaYiI-heklHU-space-3 c-cFaYiI-jroWjL-alignX-center c-cFaYiI-fBJgOB-alignX-start")[0].click()
         time.sleep(3)
-        self.driver.find_element(By.XPATH, "/html/body/div[1]/main/div[12]/div[1]/div[2]/div[2]/div[2]/div/div/div/label[1]/div[1]/div[1]/button/span").click()
+        # select wide
+        self.driver.find_element(By.XPATH, "/html/body/div[1]/main/div[12]/div[1]/div[2]/div[2]/div[2]/div/div/div/label[2]/div[1]/div/button").click()
         time.sleep(3)
-        self.driver.find_element(By.XPATH, "/html/body/div[1]/main/div[12]/div[1]/div[2]/div[2]/div[2]/div/div/div/label[1]/div[1]/div[1]/button/span").click()
-        time.sleep(3)
+        # select single vision
         self.driver.find_element(By.XPATH, "/html/body/div[1]/main/div[12]/div[1]/div[2]/div[2]/div[2]/div/div/div/label[1]/div[1]/div[1]/button/span").click()
         time.sleep(3)
         self.driver.find_element(By.XPATH, "/html/body/div[1]/main/div[12]/div[1]/div[2]/div[2]/div[2]/div/div/div/label[1]/div[1]/div[1]/button/span").click()
         time.sleep(3)
         self.driver.find_element(By.XPATH, "/html/body/div[1]/main/div[12]/div[1]/div[2]/div[2]/div[3]/div/div/div/button[1]/div/span").click()
         time.sleep(3)
-
+        cart_price = self.driver.find_element(By.XPATH, "/html/body/div[2]/div/main/div/section/div[1]/header/div/h2")
+        self.assertEqual("Your cart: $95", cart_price.text)
 
 
 
