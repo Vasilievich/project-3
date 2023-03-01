@@ -43,6 +43,7 @@ You should
 - Generate the testing reports that are required as part of the testing process
 - Make use of a test suite that has multiple test cases with one test suite
 - Manage your code base by using GitHub branches
+- The necessary `requirements.txt` file should be generated
 
 ### Planning requirements
 
