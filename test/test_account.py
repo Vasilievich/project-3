@@ -3,6 +3,12 @@ import time
 from selenium import webdriver
 from selenium.webdriver import Keys
 from selenium.webdriver.common.by import By
+from selenium.webdriver import ChromeOptions
+
+opts = ChromeOptions()
+opts.add_argument("--width=800")
+opts.add_argument("--height=600")
+# opts.add_argument("--headless")
 
 class TestAccount(unittest.TestCase):
     """
@@ -13,7 +19,7 @@ class TestAccount(unittest.TestCase):
         set up unittest, navigate to site
         :return:
         """
-        self.driver = webdriver.Chrome()
+        self.driver = webdriver.Chrome(options=opts, executable_path="chromedriver.exe")
         self.driver.get("https://www.warbyparker.com/")
         self.driver.implicitly_wait(30)
         self.driver.maximize_window()
