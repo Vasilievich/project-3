@@ -44,6 +44,9 @@ class DownloadVirtualEyeExam(unittest.TestCase):
         
         
     def tearDown(self):
+        """
+        tear down test and quit driver
+        """
         self.driver.quit()
 
 if __name__ == '__main__':
