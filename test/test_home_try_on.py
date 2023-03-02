@@ -29,7 +29,7 @@ class HomeTryOn(unittest.TestCase):
 
     def test_home_try_on(self):
         """
-
+        testing home try on option
         :return:
         """
         # # click search button
@@ -78,3 +78,7 @@ class HomeTryOn(unittest.TestCase):
     def tearDown(self) -> None:
         time.sleep(3)
         self.driver.quit()
+        
+
+if __name__ == '__main__':
+    unittest.main(verbosity=2)
