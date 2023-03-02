@@ -16,6 +16,9 @@ opts.add_argument("--height=600")
 
 
 class FindStoreLocation(unittest.TestCase):
+    """
+    testing store locator and optometrist locator
+    """
 
     def setUp(self) -> None:
         """
@@ -74,6 +77,9 @@ class FindStoreLocation(unittest.TestCase):
 
 
     def tearDown(self):
+        """
+        tear down test and quit driver
+        """
         self.driver.quit()
 
 
