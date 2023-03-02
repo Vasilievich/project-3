@@ -38,7 +38,6 @@ class DownloadVirtualEyeExam(unittest.TestCase):
         time.sleep(2)
 
         
-        
     def tearDown(self):
         """
         tear down test and quit driver
