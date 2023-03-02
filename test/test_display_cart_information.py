@@ -39,7 +39,7 @@ class DisplayCartInformation(unittest.TestCase):
         search_field_element.send_keys("chamberlain")
         time.sleep(1)
 
-        item_list = self.driver.find_elements(By.CLASS_NAME, "c-dDfmTE")[1].click()
+        item_list = self.driver.find_elements(By.CLASS_NAME, "c-dDfmTE")[0].click()
         time.sleep(1)
 
         # select lenses and purchase
@@ -86,12 +86,19 @@ class DisplayCartInformation(unittest.TestCase):
 
         # finds prescription type of glasses and assertEqual the prescription type information
         glasses_prescription_type = self.driver.find_element(By.XPATH, "/html/body/div[2]/div/main/div/section/div[1]/div[1]/div/span/div/div[2]/div[1]/div[3]/div/div[1]/p")
-        self.assertEqual("Non-prescription     $95", glasses_prescription_type.text)
+        self.assertEqual("Non-prescription\n$95", glasses_prescription_type.text)
 
         # finds lens type of glasses and assertEqual the lens type information
         glasses_lens_type = self.driver.find_element(By.XPATH, "/html/body/div[2]/div/main/div/section/div[1]/div[1]/div/span/div/div[2]/div[1]/div[3]/div/div[2]/p")
-        self.assertEqual("Classic  Free", glasses_lens_type.text)
+        self.assertEqual("Classic\nFree", glasses_lens_type.text)
 
+        # finds shipping information of glasses and assertEqual the shipping information
+        shipping_info = self.driver.find_element(By.XPATH, "/html/body/div[2]/div/main/div/section/div[1]/div[2]/div[1]/p[1]/span")
+        self.assertEqual("Standard: Free", shipping_info.text)
+
+        # finds cost information of glasses and assertEqual the cost information
+        cost_info = self.driver.find_element(By.XPATH, "/html/body/div[2]/div/main/div/section/div[1]/div[1]/div/span/div/div[2]/div[1]/div[4]/div/div/p")
+        self.assertEqual("$95",cost_info.text)
 
     def tearDown(self):
         """
