@@ -58,7 +58,7 @@ class FilterGlassesAddToCart(unittest.TestCase):
         self.driver.find_element(By.XPATH, "/html/body/div[1]/main/div[12]/div[1]/div[2]/div[2]/div[2]/div/div/div/label[2]/div[1]/div/button/span").click()
         time.sleep(2)
         # select lenses and purchase
-        self.driver.find_element(By.CLASS_NAME, "c-cFaYiI c-cFaYiI-heklHU-space-3 c-cFaYiI-jroWjL-alignX-center c-cFaYiI-fBJgOB-alignX-start")[0].click()
+        self.driver.find_element(By.CSS_SELECTOR, "<#cta-add-frame-to-cart-large-pill-denim-select-lenses-and-purchase > div > span").click()
         time.sleep(3)
         # select wide
         self.driver.find_element(By.XPATH, "/html/body/div[1]/main/div[12]/div[1]/div[2]/div[2]/div[2]/div/div/div/label[2]/div[1]/div/button").click()
