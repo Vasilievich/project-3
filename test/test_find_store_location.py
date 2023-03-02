@@ -4,23 +4,18 @@ from selenium import webdriver
 from selenium.webdriver import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver import ChromeOptions
-from selenium.webdriver.support import expected_conditions
-from selenium.webdriver.support.ui import WebDriverWait
+
 
 opts = ChromeOptions()
 opts.add_argument("--width=800")
 opts.add_argument("--height=600")
 
 
-# opts.add_argument("--headless")
-
-
 class FindStoreLocation(unittest.TestCase):
     """
     testing store locator and optometrist locator
     """
-
-    def setUp(self) -> None:
+    def setUp(self):
         """
         set up unittest, navigate to site
         :return:

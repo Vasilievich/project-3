@@ -1,23 +1,20 @@
 import unittest
 import time
 from selenium import webdriver
-# from selenium.webdriver import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver import ChromeOptions
-from selenium.webdriver.support import expected_conditions
-from selenium.webdriver.support.ui import WebDriverWait
+
 
 opts = ChromeOptions()
 opts.add_argument("--width=800")
 opts.add_argument("--height=600")
 
 
-# opts.add_argument("--headless")
-
-
 class DownloadVirtualEyeExam(unittest.TestCase):
-
-    def setUp(self) -> None:
+    """
+    testing the download virtual vision test function
+    """
+    def setUp(self):
         """
         set up unittest, navigate to site
         :return:
@@ -40,7 +37,6 @@ class DownloadVirtualEyeExam(unittest.TestCase):
         self.assertEqual("Virtual Vision Test 12+", virtual_vision_title.text)
         time.sleep(2)
 
-        
         
         
     def tearDown(self):

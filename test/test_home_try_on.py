@@ -12,9 +12,6 @@ opts.add_argument("--width=800")
 opts.add_argument("--height=600")
 
 
-# opts.add_argument("--headless")
-
-
 class HomeTryOn(unittest.TestCase):
 
     def setUp(self) -> None:
