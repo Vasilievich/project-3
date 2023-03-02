@@ -68,6 +68,9 @@ class FindStoreLocation(unittest.TestCase):
         time.sleep(2)
         select_continue = self.driver.find_element(By.XPATH, "/html/body/div[2]/div/main/div[2]/div/div[2]/section/div[1]/div[2]/button").click()
         time.sleep(2)
+        select_time = self.driver.find_element(By.XPATH, "/html/body/div[2]/div/main/div[2]/div/div/form/div/fieldset/legend")
+        self.assertEqual("Select an exam time", select_time.text)
+        time.sleep(2)
 
 
     def tearDown(self):
