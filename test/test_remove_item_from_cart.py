@@ -115,8 +115,14 @@ class RemoveItemFromCart(unittest.TestCase):
         # checks the total cost before removing an item
         self.assertEqual("Your cart: $160", total_cost.text)
 
+
         # select x button to remove item
-        self.driver.find_element(By.XPATH, "/html/body/div[2]/div/main/div/section/div[1]/div[1]/div/span/div[1]/button/svg/g").click()
+        self.driver.find_element(By.XPATH, "/html/body/div[2]/div/main/div/section/div[1]/div[1]/div/span/div[1]/button").click()
+        time.sleep(2)
+
+        # select yes button to remove item
+        self.driver.find_element(By.XPATH, "/html/body/div[2]/div/main/div/section/div[1]/div[1]/div/span/div[1]/div[2]/div[2]/div/button[1]").click()
+
         time.sleep(2)
 
         # finds total cost text from cart list after removing item
