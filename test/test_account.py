@@ -25,7 +25,7 @@ class TestAccount(unittest.TestCase):
         self.driver.maximize_window()
 
     def test_account_creation(self):
-        self.sign_in = self.driver.find_element(By.XPATH, '/html/body/div[2]/div/header/nav/div[1]/div/section[2]/ul/li[3]/a').click()
+        self.driver.find_element(By.XPATH, '/html/body/div[2]/div/header/nav/div[1]/div/section[2]/ul/li[3]/a').click()
         time.sleep(2)
         self.create_account = self.driver.find_element(By.XPATH, '/html/body/div[1]/main/div/div[2]/div/div[2]/div/div[3]/div/div/div/a/span').click()
         time.sleep(2)

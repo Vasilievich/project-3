@@ -29,26 +29,17 @@ class HomeTryOn(unittest.TestCase):
         
     def test_download_virtual_eye_exam(self):
         """
-
+        testing the download virtual eye exam option
         :return:
         """
-        # # click search button
-        # search_button_element = WebDriverWait(self.driver, 10).until(
-        #     expected_conditions.visibility_of_element_located((By.XPATH, "//*[@href='search']/div[1]/div/section[2]/ul/li[1]/a"))
-        # )
-        search_button_element = self.driver.find_element(By.XPATH,
-                                                         "/html/body/div[2]/div/header/nav/div[1]/div/section[2]/ul/li[1]/a/span/span")
+        get_a_prescription = self.driver.find_element(By.XPATH, "/html/body/div[2]/div/header/nav/div[2]/ul/li[6]/a").click()
+        time.sleep(2)
+        download_virtual_test = self.driver.find_element(By.XPATH, "/html/body/div[2]/div/main/div/div/div[2]/div/div[2]/div/div[3]/a").click()
+        time.sleep(2)
+        virtual_vision_title = self.driver.find_element(By.XPATH, "/html/body/div[3]/main/div[2]/section[1]/div/div[2]/header/h1")
+        self.assertEqual("Virtual Vision Test 12+", virtual_vision_title.text)
+        time.sleep(2)
 
-        search_button_element.click()
-        time.sleep(1)
-
-        # finds search field element
-        search_field_element = self.driver.find_element(By.XPATH,
-                                                        "/html/body/div[1]/main/div/div/div/div/div/div/div[1]/input")
-
-        # input string for search
-        search_field_element.send_keys("percey")
-        time.sleep(1)
         
         
         
