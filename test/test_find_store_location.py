@@ -41,12 +41,30 @@ class FindStoreLocation(unittest.TestCase):
         time.sleep(2)
         address_selection = self.driver.find_element(By.XPATH, "/html/body/div[2]/div/main/div/div[2]/div[1]/div[1]/a").click()
         time.sleep(2)
-
-
-
-        virtual_vision_title = self.driver.find_element(By.XPATH,"/html/body/div[3]/main/div[2]/section[1]/div/div[2]/header/h1")
-        self.assertEqual("Virtual Vision Test 12+", virtual_vision_title.text)
+        store_location = self.driver.find_element(By.XPATH, "/html/body/div[2]/div/main/div/div/div[2]/div/div/h1")
+        self.assertEqual("Fourth St.", store_location.text)
         time.sleep(2)
+
+    def test_eye_exam_location(self):
+        """
+        testing to find store locations with eye exam
+        :return:
+        """
+        locations = self.driver.find_element(By.XPATH, "/html/body/div[2]/div/header/nav/div[1]/div/section[2]/ul/li[2]/a").click()
+        time.sleep(2)
+        exam_locations = self.driver.find_element(By.XPATH, "/html/body/div[2]/div/main/div/div[1]/label/div/div").click()
+        time.sleep(2)
+        self.address_field = self.driver.find_element(By.XPATH,"/html/body/div[2]/div/main/div/div[1]/div/div[1]/input")
+        self.address_field.send_keys("94502")
+        time.sleep(4)
+        self.address_field.send_keys(Keys.ENTER)
+        time.sleep(2)
+        address_selection = self.driver.find_element(By.XPATH, "/html/body/div[2]/div/main/div/div[2]/div[1]/div[1]/a").click()
+        time.sleep(2)
+        store_location = self.driver.find_element(By.XPATH, "/html/body/div[2]/div/main/div/div/div[2]/div/div/h1")
+        self.assertEqual("Fourth St.", store_location.text)
+        time.sleep(2)
+
 
     def tearDown(self):
         self.driver.quit()
