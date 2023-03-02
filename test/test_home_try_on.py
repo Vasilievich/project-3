@@ -75,8 +75,10 @@ class HomeTryOn(unittest.TestCase):
         home_try_on_count = self.driver.find_element(By.XPATH, '//*[@id="mainContent"]/div/section/div[1]/div[1]/h2')
         self.assertEqual(home_try_on_count.text, "1 of 5 Home Try-On frames chosen")
 
-    def tearDown(self) -> None:
-        time.sleep(3)
+    def tearDown(self):
+        """
+        tear down test and quit driver
+        """
         self.driver.quit()
         
 

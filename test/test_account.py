@@ -25,6 +25,9 @@ class TestAccount(unittest.TestCase):
         self.driver.maximize_window()
 
     def test_account_creation(self):
+        """
+        test creating account function
+        """
         # click sign in
         self.driver.find_element(By.XPATH, '/html/body/div[2]/div/header/nav/div[1]/div/section[2]/ul/li[3]/a').click()
         time.sleep(2)
@@ -46,6 +49,9 @@ class TestAccount(unittest.TestCase):
 
 
     def test_account_login(self):
+        """
+        test sign in function
+        """
         # click sign in page
         self.driver.find_element(By.XPATH, '/html/body/div[2]/div/header/nav/div[1]/div/section[2]/ul/li[3]/a').click()
         time.sleep(3)
@@ -64,6 +70,9 @@ class TestAccount(unittest.TestCase):
 
 
     def tearDown(self):
+        """
+        tear down test and quit driver
+        """
         self.driver.quit()
 
 if __name__ == '__main__':
