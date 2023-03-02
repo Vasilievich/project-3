@@ -15,7 +15,7 @@ opts.add_argument("--height=600")
 # opts.add_argument("--headless")
 
 
-class HomeTryOn(unittest.TestCase):
+class DownloadVirtualEyeExam(unittest.TestCase):
 
     def setUp(self) -> None:
         """
