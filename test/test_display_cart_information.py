@@ -47,19 +47,15 @@ class DisplayCartInformation(unittest.TestCase):
                                  "/html/body/div[1]/main/div[1]/div/div/div[2]/div/div/div[6]/div/div/button[1]").click()
 
         time.sleep(1)
-        # select medium
+        # select wide
         self.driver.find_element(By.XPATH,
-                                 "/html/body/div[1]/main/div[12]/div[1]/div[2]/div[2]/div[2]/div/div/div/label[1]/div[1]/div").click()
+                                 "/html/body/div[1]/main/div[12]/div[1]/div[2]/div[2]/div[2]/div/div/div/label[2]/div[1]/div").click()
         time.sleep(1)
 
-        # select single vision
+        # select non-prescription
         self.driver.find_element(By.XPATH,
-                                 "/html/body/div[1]/main/div[12]/div[1]/div[2]/div[2]/div[2]/div/div/div/label[1]/div[1]/div[1]/button").click()
+                                 "/html/body/div[1]/main/div[12]/div[1]/div[2]/div[2]/div[2]/div/div/div/label[3]/div[1]/div[1]/button").click()
 
-        time.sleep(1)
-        # select standard
-        self.driver.find_element(By.XPATH,
-                                 "/html/body/div[1]/main/div[12]/div[1]/div[2]/div[2]/div[2]/div/div/div/label[1]/div[1]/div[1]/button").click()
         time.sleep(1)
         # select classic
         self.driver.find_element(By.XPATH,
@@ -75,6 +71,26 @@ class DisplayCartInformation(unittest.TestCase):
         self.driver.find_element(By.XPATH,
                                  "/html/body/div[1]/main/div[12]/div[1]/div[2]/div[2]/div[3]/div/div/div/button[1]").click()
         time.sleep(1)
+
+        # finds type of glasses and assertEqual the type information
+        glasses_type = self.driver.find_element(By.XPATH,"/html/body/div[2]/div/main/div/section/div[1]/div[1]/div/span/div/div[2]/h4/a")
+        self.assertEqual("Chamberlain", glasses_type.text)
+
+        # finds subtype of glasses and assertEqual the subtype information
+        glasses_subtype = self.driver.find_element(By.XPATH, "/html/body/div[2]/div/main/div/section/div[1]/div[1]/div/span/div/div[2]/div[1]/div[1]")
+        self.assertEqual("Whiskey Tortoise", glasses_subtype.text)
+
+        # finds frame width of glasses and assertEqual the frame width information
+        glasses_frame_width = self.driver.find_element(By.XPATH, "/html/body/div[2]/div/main/div/section/div[1]/div[1]/div/span/div/div[2]/div[1]/div[2]/p")
+        self.assertEqual("Wide", glasses_frame_width.text)
+
+        # finds prescription type of glasses and assertEqual the prescription type information
+        glasses_prescription_type = self.driver.find_element(By.XPATH, "/html/body/div[2]/div/main/div/section/div[1]/div[1]/div/span/div/div[2]/div[1]/div[3]/div/div[1]/p")
+        self.assertEqual("Non-prescription     $95", glasses_prescription_type.text)
+
+        # finds lens type of glasses and assertEqual the lens type information
+        glasses_lens_type = self.driver.find_element(By.XPATH, "/html/body/div[2]/div/main/div/section/div[1]/div[1]/div/span/div/div[2]/div[1]/div[3]/div/div[2]/p")
+        self.assertEqual("Classic  Free", glasses_lens_type.text)
 
 
     def tearDown(self):
