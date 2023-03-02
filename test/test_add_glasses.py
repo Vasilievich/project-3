@@ -90,6 +90,31 @@ class FilterGlassesAddToCart(unittest.TestCase):
         self.assertEqual("Add to cart: $95", cart_price.text)
 
 
+    def test_filter_search(self):
+        """
+        test that search results contain the search term
+        :return:
+        """
+        # click search button
+        self.driver.find_element(By.XPATH, "/html/body/div[2]/div/header/nav/div[1]/div/section[2]/ul/li[1]/a/span/span").click()
+        time.sleep(1)
+
+        # finds search field element
+        search_field_element = self.driver.find_element(By.XPATH, "/html/body/div[1]/main/div/div/div/div/div/div/div[1]/input")
+
+        # input string for search
+        search_field_element.send_keys("per")
+        time.sleep(5)
+
+        # get the search results
+        search_results = self.driver.find_elements(By.CLASS_NAME, "c-iSwBqf")
+
+        # check that the search term is in the product name
+        for search_result in search_results:
+            product_name = search_result.find_element(By.TAG_NAME, 'h3')
+            self.assertIn("per", product_name.text.lower())
+
+
 
     def tearDown(self):
         """
