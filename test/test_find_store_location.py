@@ -59,10 +59,14 @@ class FindStoreLocation(unittest.TestCase):
         time.sleep(4)
         self.address_field.send_keys(Keys.ENTER)
         time.sleep(2)
-        address_selection = self.driver.find_element(By.XPATH, "/html/body/div[2]/div/main/div/div[2]/div[1]/div[1]/a").click()
+        address_selection = self.driver.find_element(By.XPATH, "/html/body/div[2]/div/main/div/div[2]/div[1]/div[1]/a[1]").click()
         time.sleep(2)
-        store_location = self.driver.find_element(By.XPATH, "/html/body/div[2]/div/main/div/div/div[2]/div/div/h1")
-        self.assertEqual("Fourth St.", store_location.text)
+        burlingame_store_location = self.driver.find_element(By.XPATH, "/html/body/div[2]/div/main/div/div/div[2]/div/div/h1")
+        self.assertEqual("Burlingame Ave.", burlingame_store_location.text)
+        time.sleep(2)
+        book_exam = self.driver.find_element(By.XPATH, "/html/body/div[2]/div/main/div/div/section[1]/div/div/div/div/button").click()
+        time.sleep(2)
+        select_continue = self.driver.find_element(By.XPATH, "/html/body/div[2]/div/main/div[2]/div/div[2]/section/div[1]/div[2]/button").click()
         time.sleep(2)
 
 
