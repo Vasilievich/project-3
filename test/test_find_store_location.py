@@ -13,7 +13,7 @@ opts.add_argument("--height=600")
 
 class FindStoreLocation(unittest.TestCase):
     """
-    testing store locator and optometrist locator
+    This class will generate the store locator and optometrist locator
     """
     def setUp(self):
         """

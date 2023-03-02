@@ -12,7 +12,7 @@ opts.add_argument("--height=600")
 
 class DownloadVirtualEyeExam(unittest.TestCase):
     """
-    testing the download virtual vision test function
+    This class will send us to download the virtual vision test from the third party site
     """
     def setUp(self):
         """

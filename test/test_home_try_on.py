@@ -12,7 +12,7 @@ opts.add_argument("--height=600")
 
 class HomeTryOn(unittest.TestCase):
     """
-    testing home try on function
+    This class will select the home try on function
     """
     def setUp(self) -> None:
         """
