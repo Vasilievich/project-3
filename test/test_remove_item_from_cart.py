@@ -106,8 +106,9 @@ class RemoveItemFromCart(unittest.TestCase):
         self.driver.find_element(By.XPATH, "/html/body/div[1]/main/div[12]/div[1]/div[2]/div[2]/div[2]/div/div/div/label[1]/div[1]/div[1]/button").click()
         time.sleep(1)
 
+        # select add to cart
         self.driver.find_element(By.XPATH, "/html/body/div[1]/main/div[12]/div[1]/div[2]/div[2]/div[3]/div/div/div/button[1]").click()
-        time.sleep(1)
+        time.sleep(3)
 
         # finds total cost text from cart list
         total_cost = self.driver.find_element(By.XPATH, "/html/body/div[2]/div/main/div/section/div[1]/header/div/h2")
@@ -118,12 +119,13 @@ class RemoveItemFromCart(unittest.TestCase):
 
         # select x button to remove item
         self.driver.find_element(By.XPATH, "/html/body/div[2]/div/main/div/section/div[1]/div[1]/div/span/div[1]/button").click()
-        time.sleep(2)
+        time.sleep(1)
+        # "/html/body/div[2]/div/main/div/section/div[1]/div[1]/div/span/div[1]/button"
 
         # select yes button to remove item
         self.driver.find_element(By.XPATH, "/html/body/div[2]/div/main/div/section/div[1]/div[1]/div/span/div[1]/div[2]/div[2]/div/button[1]").click()
 
-        time.sleep(2)
+        time.sleep(1)
 
         # finds total cost text from cart list after removing item
         total_cost = self.driver.find_element(By.XPATH, "/html/body/div[2]/div/main/div/section/div[1]/header/div/h2")
@@ -131,7 +133,7 @@ class RemoveItemFromCart(unittest.TestCase):
         # checks the total cost after removing an item
         self.assertEqual("Your cart: $95", total_cost.text)
 
-
+        time.sleep(2)
 
     def tearDown(self):
         """
